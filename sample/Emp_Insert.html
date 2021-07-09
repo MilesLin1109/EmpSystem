@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Employee_Insert_Page</title>
+<meta name="description" content="Basic Inputs">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no, minimal-ui">
+<!-- Call App Mode on ios devices -->
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<!-- Remove Tap Highlight on Windows Phone IE -->
+<meta name="msapplication-tap-highlight" content="no">
+<!-- base css -->
+<link rel="stylesheet" media="screen, print" href="../css/vendors.bundle.css">
+<link rel="stylesheet" media="screen, print" href="../css/app.bundle.css">
+<!-- Place favicon.ico in the root directory -->
+<link rel="apple-touch-icon" sizes="180x180" href="../img/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../img/favicon/favicon-32x32.png">
+<link rel="mask-icon" href="../img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<!-- 要使用jquery就用以下方式載入 -->
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+</head>
+<body class="mod-bg-1 mod-nav-link ">       
+        <!-- BEGIN Page Wrapper -->
+        <div class="page-wrapper">
+            <div class="page-inner">
+                <main id="js-page-content" role="main" class="page-content">
+                    <div class="subheader">
+                        <h1 class="subheader-title">
+                            AM international co. ltd <i class='subheader-icon fal fa-edit'></i>    
+                            <small>
+                                Employee_System
+                            </small>
+                        </h1>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-6">
+                            <div id="panel-1" class="panel">
+                                <div class="panel-hdr">
+                                    <h2>
+                                         <span class="fw-300"><i>新進員工資料表</i></span>
+                                    </h2>
+                                    <div class="frame-wrap">
+                                        <div class="demo">
+                                            <button type="button" class="btn btn btn-xs btn-success" id="main_page">回首頁</button>
+                                            <button type="button" class="btn btn-xs btn-warning">Warning</button>
+                                            <button type="button" class="btn btn-xs btn-info">Info</button>
+                                        </div>
+                                    </div>            
+                                </div>
+                                <div class="panel-container show">
+                                    <div class="panel-content">
+                                        <!-- <div class="panel-tag">
+                                            員工資料表說明
+                                        </div> -->
+                                        <form method="post" action="../EmpInsert" id="up_form" onsubmit="return check();">
+                                      <!--  <div class="form-group">
+                                                <label class="form-label" for="simpleinput">員工編號</label>
+                                                <input type="text" id="emp-number" class="form-control">                            
+                                            </div>  -->
+                                            <div class="form-group">
+                                                <label class="form-label" for="example-email-2">員工姓名</label>
+                                                <input type="text" id="ename" name="ename" class="form-control" placeholder="王曉明">
+                                                <span id="idsp1"></span>
+                                                <p class="remark1">
+                                                    (1.不可空白 2.至少兩個字以上 3.必須全部為中文字)
+                                                </p>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label" for="example-date">入職日期</label>
+                                                <input class="form-control" id="hiredate" type="date" name="hiredate" value="">
+                                                <span id="idsp2"></span>
+                                                <p class="remark1">格式:西元年/月/日(yyyy/mm/dd)</p>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label" for="example-password">薪水</label>
+                                                <input type="text" id="salary" name="salary" class="form-control">
+                                                <span id="idsp3"></span>
+                                                <p class="remark1">
+                                                    (1.不可空白 2.必須為數字)
+                                                </p>
+                                            </div>                        
+                                            <div class="form-group">
+                                                <label class="form-label" for="example-select">部門編號</label>
+                                                <select class="form-control" id="deptno" name="deptno">
+                                                    <option>100</option>
+                                                    <option>200</option>
+                                                    <option>300</option>                                                    
+                                                </select>
+                                            </div> 
+                                            <div class="form-group">
+                                                <label class="form-label" for="example-select">職稱</label>
+                                                <select class="form-control" id="title" name="title">
+                                                    <option>senior engineer</option>
+                                                    <option>engineer</option>
+                                                    <option>manager</option>
+                                                    <option>SA_REP</option>                                                    
+                                                </select>
+                                            </div>                                    
+                                            <div class="demo-v-spacing mt-3 mt-xl-0">      
+                                                <input type="submit" class="btn btn-success btn-pills btn-lg btn-block" id="submit" value="送出">
+                                                    <!-- <span>送出</span>
+                                                </button> -->
+                                            </div>                                                                                                                        
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>        
+    </body>
+    <script type="text/javascript" src="../js/Emp_Insert.js"></script>    
+</html>
